@@ -59,7 +59,7 @@ export default class Factorial extends Component {
             </CardItem>
 
             <CardItem footer>
-              <Button info androidRippleColor onPress={this.getFactorial()}>
+              <Button info androidRippleColor onPress={this.getFactorial}>
                 <Text>Calcular</Text>
               </Button>
             </CardItem>

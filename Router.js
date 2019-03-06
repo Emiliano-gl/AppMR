@@ -18,6 +18,11 @@ import Circulo from './app/screens/Circulo';
 import AnioBisiesto from './app/screens/AnioBisiesto';
 import CantPalabras from './app/screens/CantPalabras';
 import Velocity from './app/screens/Velocidades';
+import MultiSuma from './app/screens/MultiSuma';
+import DiviResta from './app/screens/DiviResta';
+import OrdenarTres from './app/screens/OrdenarTres';
+import CambioDivisas from './app/screens/CambioDivisas';
+import Temperaturas from './app/screens/Temperaturas';
 
 const Drawer = props => (
   <SafeAreaView style={{ flex: 1 }}>
@@ -45,14 +50,19 @@ const AppDrawerNavigator = createDrawerNavigator(
     "Inicio": HomeScreen,
     "Año bisiesto":AnioBisiesto,
     "Calcular círculo": Circulo,
+    "Calcular velocidad": Velocity,
+    "Cambio de divisas": CambioDivisas,
     "Contar palabras": CantPalabras,
-    "Decimal a Binario": DecimalBinario,
-    "Decimal a Romano": DecimalRomano,
+    "Conversor de temperaturas": Temperaturas,
+    "Decimal a binario": DecimalBinario,
+    "Decimal a romano": DecimalRomano,
     "Días a minutos": DiasMinutos,
     "Dígitos": Digitos,
+    "División por resta": DiviResta,
     "Factorial": Factorial,
-    "Hola Mundo": HolaMundo,
-    "Calcular velocidad": Velocity
+    "Hola mundo": HolaMundo,
+    "Multiplicación por suma": MultiSuma,
+    "Ordenar 3 números": OrdenarTres
   },
   {
     contentComponent: Drawer,
