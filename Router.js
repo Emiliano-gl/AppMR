@@ -9,6 +9,7 @@ import {
 
 import HomeScreen from "./app/public/HomeScreen";
 import HolaMundo from './app/screens/HolaMundo';
+import DiasMinutos from "./app/screens/DiasMinutos";
 
 const Drawer = props => (
   <SafeAreaView style={{ flex: 1 }}>
@@ -33,8 +34,9 @@ const Drawer = props => (
 
 const AppDrawerNavigator = createDrawerNavigator(
   {
-    Home: HomeScreen,
-    "Hola Mundo": HolaMundo
+    "Inicio": HomeScreen,
+    "Hola Mundo": HolaMundo,
+    "Días a minutos": DiasMinutos
   },
   {
     contentComponent: Drawer,

@@ -11,7 +11,7 @@ export default class NavBar extends Component {
         style={{ backgroundColor: "#212121" }}
       >
         <Left>
-          <Button transparent onPress={() => navigation.openDrawer()}>
+          <Button transparent androidRippleColor onPress={() => navigation.openDrawer()}>
             <Icon name="menu" />
           </Button>
         </Left>
