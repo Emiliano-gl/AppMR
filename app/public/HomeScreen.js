@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
-import { Container, Text } from "native-base";
+import { StyleSheet, View, Image } from "react-native";
+import { Container } from "native-base";
 import NavBar from "../components/NavBar";
 
 export default class HomeScreen extends Component {
@@ -11,7 +11,7 @@ export default class HomeScreen extends Component {
       <Container>
         <NavBar navigation={navigation} />
         <View style={styles.container}>
-          <Text> Home screen </Text>
+          <Image source={require("../../assets/escudo.jpeg")} />
         </View>
       </Container>
     );

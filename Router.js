@@ -13,6 +13,11 @@ import DiasMinutos from "./app/screens/DiasMinutos";
 import Factorial from './app/screens/Factorial';
 import DecimalBinario from './app/screens/DecimalBinario';
 import DecimalRomano from './app/screens/DecimalRomano';
+import Digitos from './app/screens/Digitos';
+import Circulo from './app/screens/Circulo';
+import AnioBisiesto from './app/screens/AnioBisiesto';
+import CantPalabras from './app/screens/CantPalabras';
+import Velocity from './app/screens/Velocidades';
 
 const Drawer = props => (
   <SafeAreaView style={{ flex: 1 }}>
@@ -38,11 +43,16 @@ const Drawer = props => (
 const AppDrawerNavigator = createDrawerNavigator(
   {
     "Inicio": HomeScreen,
+    "Año bisiesto":AnioBisiesto,
+    "Calcular círculo": Circulo,
+    "Contar palabras": CantPalabras,
     "Decimal a Binario": DecimalBinario,
     "Decimal a Romano": DecimalRomano,
     "Días a minutos": DiasMinutos,
+    "Dígitos": Digitos,
     "Factorial": Factorial,
-    "Hola Mundo": HolaMundo
+    "Hola Mundo": HolaMundo,
+    "Calcular velocidad": Velocity
   },
   {
     contentComponent: Drawer,
