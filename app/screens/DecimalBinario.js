@@ -13,16 +13,16 @@ import {
 } from "native-base";
 import NavBar from "../components/NavBar";
 
-export default class DiasMinutos extends Component {
+export default class DecimalBinario extends Component {
   state = {
-    days: 0,
-    res: 0
+    number: 0,
+    bin: "0"
   };
 
-  convertDays = () => {
-    let days = this.state.days;
-    let minutes = days * 1440;
-    this.setState({ res: minutes });
+  convertDecBin = () => {
+    let num = parseInt(this.state.number);
+    let binary = num.toString(2);
+    this.setState({ bin: binary });
   };
 
   render() {
@@ -35,15 +35,15 @@ export default class DiasMinutos extends Component {
         <Content padder>
           <Card>
             <CardItem header>
-              <H1>Días a minutos</H1>
+              <H1>Decimal a Binario</H1>
             </CardItem>
 
             <CardItem>
               <Item floatingLabel>
-                <Label>Días a convertir</Label>
+                <Label>Número</Label>
                 <Input
                   keyboardType="phone-pad"
-                  onChangeText={val => this.setState({ days: val })}
+                  onChangeText={num => this.setState({ number: num })}
                 />
               </Item>
             </CardItem>
@@ -52,7 +52,7 @@ export default class DiasMinutos extends Component {
               <Button
                 info
                 androidRippleColor
-                onPress={() => this.convertDays()}
+                onPress={() => this.convertDecBin()}
               >
                 <Text>Convertir</Text>
               </Button>
@@ -61,7 +61,7 @@ export default class DiasMinutos extends Component {
 
           <Card>
             <CardItem header>
-              <Text>Minutos: {this.state.res}</Text>
+              <Text>Binario: {this.state.bin}</Text>
             </CardItem>
           </Card>
         </Content>

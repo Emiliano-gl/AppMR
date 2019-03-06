@@ -8,7 +8,6 @@ import {
   Button,
   Label,
   H1,
-  H3,
   Card,
   CardItem
 } from "native-base";
@@ -33,12 +32,12 @@ export default class ScreenPlaceholder extends Component {
             <CardItem>
               <Item floatingLabel>
                 <Label>Input label</Label>
-                <Input keyboardType="phone-pad" />
+                <Input keyboardType="phone-pad" onChangeText={num => this.setState({})}/>
               </Item>
             </CardItem>
 
             <CardItem footer>
-              <Button light androidRippleColor>
+              <Button info androidRippleColor onPress={() => }>
                 <Text>Button</Text>
               </Button>
             </CardItem>
@@ -46,7 +45,7 @@ export default class ScreenPlaceholder extends Component {
 
           <Card>
             <CardItem header>
-              <H3>Res</H3>
+              <Text>Res {this.state}</Text>
             </CardItem>
           </Card>
         </Content>

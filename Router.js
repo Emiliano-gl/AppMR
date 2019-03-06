@@ -10,6 +10,9 @@ import {
 import HomeScreen from "./app/public/HomeScreen";
 import HolaMundo from './app/screens/HolaMundo';
 import DiasMinutos from "./app/screens/DiasMinutos";
+import Factorial from './app/screens/Factorial';
+import DecimalBinario from './app/screens/DecimalBinario';
+import DecimalRomano from './app/screens/DecimalRomano';
 
 const Drawer = props => (
   <SafeAreaView style={{ flex: 1 }}>
@@ -35,8 +38,11 @@ const Drawer = props => (
 const AppDrawerNavigator = createDrawerNavigator(
   {
     "Inicio": HomeScreen,
-    "Hola Mundo": HolaMundo,
-    "Días a minutos": DiasMinutos
+    "Decimal a Binario": DecimalBinario,
+    "Decimal a Romano": DecimalRomano,
+    "Días a minutos": DiasMinutos,
+    "Factorial": Factorial,
+    "Hola Mundo": HolaMundo
   },
   {
     contentComponent: Drawer,

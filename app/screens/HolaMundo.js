@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
-import { Container, Text, Content } from "native-base";
+import { Container, H1 } from "native-base";
 import NavBar from "../components/NavBar";
 
 export default class HolaMundo extends Component {
@@ -11,7 +11,7 @@ export default class HolaMundo extends Component {
       <Container>
         <NavBar navigation={navigation} />
         <View style={styles.container}>
-          <Text style={{ fontSize: 30, fontWeight: "500" }}>Hola mundo</Text>
+          <H1 style={{textAlign: "center"}}>Hola mundo</H1>
         </View>
       </Container>
     );

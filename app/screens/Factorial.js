@@ -13,16 +13,26 @@ import {
 } from "native-base";
 import NavBar from "../components/NavBar";
 
-export default class DiasMinutos extends Component {
+export default class Factorial extends Component {
   state = {
-    days: 0,
+    num: 0,
     res: 0
   };
 
-  convertDays = () => {
-    let days = this.state.days;
-    let minutes = days * 1440;
-    this.setState({ res: minutes });
+  getFactorial = () => {
+    let num = this.state.num;
+    let total = 1;
+
+    if (num <= 0) {
+      this.setState({ res: 0 });
+      return;
+    }
+
+    for (i = 1; i <= num; i++) {
+      total *= i;
+    }
+
+    this.setState({ res: total });
   };
 
   render() {
@@ -35,33 +45,29 @@ export default class DiasMinutos extends Component {
         <Content padder>
           <Card>
             <CardItem header>
-              <H1>Días a minutos</H1>
+              <H1>Factorial</H1>
             </CardItem>
 
             <CardItem>
               <Item floatingLabel>
-                <Label>Días a convertir</Label>
+                <Label>Número</Label>
                 <Input
                   keyboardType="phone-pad"
-                  onChangeText={val => this.setState({ days: val })}
+                  onChangeText={number => this.setState({ num: number })}
                 />
               </Item>
             </CardItem>
 
             <CardItem footer>
-              <Button
-                info
-                androidRippleColor
-                onPress={() => this.convertDays()}
-              >
-                <Text>Convertir</Text>
+              <Button info androidRippleColor onPress={this.getFactorial()}>
+                <Text>Calcular</Text>
               </Button>
             </CardItem>
           </Card>
 
           <Card>
             <CardItem header>
-              <Text>Minutos: {this.state.res}</Text>
+              <Text>Factorial: {this.state.res}</Text>
             </CardItem>
           </Card>
         </Content>
