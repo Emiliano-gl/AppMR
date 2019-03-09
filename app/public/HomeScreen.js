@@ -12,7 +12,6 @@ export default class HomeScreen extends Component {
         <NavBar navigation={navigation} />
         <View style={styles.container}>
           <H1>Bienvenido</H1>
-          <Image source={require("../../assets/escudo.jpeg")} />
         </View>
       </Container>
     );

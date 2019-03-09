@@ -23,6 +23,7 @@ import DiviResta from './app/screens/DiviResta';
 import OrdenarTres from './app/screens/OrdenarTres';
 import CambioDivisas from './app/screens/CambioDivisas';
 import Temperaturas from './app/screens/Temperaturas';
+import Promedio from './app/screens/Promedio';
 
 const Drawer = props => (
   <SafeAreaView style={{ flex: 1 }}>
@@ -62,7 +63,8 @@ const AppDrawerNavigator = createDrawerNavigator(
     "Factorial": Factorial,
     "Hola mundo": HolaMundo,
     "Multiplicación por suma": MultiSuma,
-    "Ordenar 3 números": OrdenarTres
+    "Ordenar 3 números": OrdenarTres,
+    "Promedio": Promedio
   },
   {
     contentComponent: Drawer,

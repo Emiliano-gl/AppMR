@@ -24,10 +24,10 @@ export default class Circulo extends Component {
   calculateCircle = () => {
     let radio = parseFloat(this.state.radio);
     const PI = 3.1416;
-    
+
     let area = PI * (radio * radio);
     let perimetro = 2 * PI * radio;
-    
+
     Keyboard.dismiss();
     this.setState({ area: area, perimeter: perimetro });
   };
@@ -70,6 +70,8 @@ export default class Circulo extends Component {
             <CardItem header>
               <Text>Perímetro: {this.state.perimeter} cm</Text>
             </CardItem>
+          </Card>
+          <Card>
             <CardItem header>
               <Text>Área: {this.state.area} cm²</Text>
             </CardItem>

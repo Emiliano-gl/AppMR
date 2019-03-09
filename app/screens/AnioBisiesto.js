@@ -62,7 +62,7 @@ export default class AnioBisiesto extends Component {
                 androidRippleColor
                 onPress={() => this.calculateYear()}
               >
-                <Text>Berificar</Text>
+                <Text>Verificar</Text>
               </Button>
             </CardItem>
           </Card>
