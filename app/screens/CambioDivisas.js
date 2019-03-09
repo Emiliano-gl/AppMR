@@ -12,6 +12,7 @@ import {
   CardItem
 } from "native-base";
 import NavBar from "../components/NavBar";
+import { Keyboard } from "react-native";
 
 export default class CambioDivisas extends Component {
   state = {
@@ -23,6 +24,7 @@ export default class CambioDivisas extends Component {
   convertPesoDolar = () => {
     let pesos = parseFloat(this.state.cant);
     let dolares = pesos / 20;
+    Keyboard.dismiss();
 
     this.setState({conversion: dolares, divisa: "dolares"})
   }
@@ -30,6 +32,7 @@ export default class CambioDivisas extends Component {
   convertDolarPesos = () => {
     let dolares = parseFloat(this.state.cant);
     let pesos = dolares * 20;
+    Keyboard.dismiss();
 
     this.setState({ conversion: pesos, divisa: "pesos" })
   }

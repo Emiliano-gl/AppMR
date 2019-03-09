@@ -12,6 +12,7 @@ import {
   CardItem
 } from "native-base";
 import NavBar from "../components/NavBar";
+import { Keyboard } from "react-native";
 
 export default class DiviResta extends Component {
   state = {
@@ -24,6 +25,7 @@ export default class DiviResta extends Component {
     let total = 0;
     let ndividir = parseFloat(this.state.number1);
     let nveces = parseFloat(this.state.number2);
+    Keyboard.dismiss();
 
     while (ndividir > 0) {
       ndividir = ndividir - nveces;

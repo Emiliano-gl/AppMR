@@ -12,6 +12,7 @@ import {
   CardItem
 } from "native-base";
 import NavBar from "../components/NavBar";
+import { Keyboard } from "react-native";
 
 export default class MultiSuma extends Component {
   state = {
@@ -25,6 +26,7 @@ export default class MultiSuma extends Component {
     let num2 = parseFloat(this.state.number2);
     let aux = 0;
     let total = 0;
+    Keyboard.dismiss();
 
     while (aux < num2) {
       aux += 1;

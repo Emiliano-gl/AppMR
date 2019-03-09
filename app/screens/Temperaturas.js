@@ -12,6 +12,7 @@ import {
   CardItem
 } from "native-base";
 import NavBar from "../components/NavBar";
+import { Keyboard } from "react-native";
 
 export default class Temperaturas extends Component {
   state = {
@@ -23,12 +24,14 @@ export default class Temperaturas extends Component {
   convertCelsiusFaren = () => {
     let celsius = parseFloat(this.state.cant);
     let fahrenheit = celsius * 1.8 + 32;
+    Keyboard.dismiss();
     this.setState({conversion: fahrenheit, grados: "F"})
   }
 
   convertFarenCelsius = () => {
     let fahrenheit = parseFloat(this.state.cant);
     let celsius = (fahrenheit - 32) / 1.8;
+    Keyboard.dismiss();
     this.setState({ conversion: celsius, grados: "C" })
   }
 

@@ -12,6 +12,7 @@ import {
   CardItem
 } from "native-base";
 import NavBar from "../components/NavBar";
+import { Keyboard } from "react-native";
 
 export default class DecimalRomano extends Component {
   state = {
@@ -21,6 +22,7 @@ export default class DecimalRomano extends Component {
 
   convertDecRoman = () => {
     let num = parseInt(this.state.number);
+    Keyboard.dismiss();
 
     if (!+num) return false;
     let digits = String(+num).split(""),

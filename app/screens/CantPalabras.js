@@ -12,6 +12,7 @@ import {
   CardItem
 } from "native-base";
 import NavBar from "../components/NavBar";
+import { Keyboard } from "react-native";
 
 export default class CantPalabras extends Component {
   state = {
@@ -23,6 +24,7 @@ export default class CantPalabras extends Component {
     let palabras = this.state.oration;
     let cantPalabras = palabras.split(" ");
     let espacios = 0;
+    Keyboard.dismiss();
 
     for (let i in cantPalabras) {
       if (cantPalabras[i] == "") {

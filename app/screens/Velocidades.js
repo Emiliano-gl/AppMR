@@ -12,6 +12,7 @@ import {
   CardItem
 } from "native-base";
 import NavBar from "../components/NavBar";
+import { Keyboard } from "react-native";
 
 export default class Velocity extends Component {
   state = {
@@ -25,6 +26,7 @@ export default class Velocity extends Component {
     let a = 8;
     let Vf = Vo + a * t;
     let Vm = (Vo + Vf) / 2;
+    Keyboard.dismiss();
 
     this.setState({ velocity: Vm });
   };

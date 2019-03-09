@@ -12,6 +12,7 @@ import {
   CardItem
 } from "native-base";
 import NavBar from "../components/NavBar";
+import { Keyboard } from "react-native";
 
 export default class Factorial extends Component {
   state = {
@@ -22,6 +23,7 @@ export default class Factorial extends Component {
   getFactorial = () => {
     let num = this.state.num;
     let total = 1;
+    Keyboard.dismiss();
 
     if (num <= 0) {
       this.setState({ res: 0 });

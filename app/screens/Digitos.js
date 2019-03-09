@@ -12,6 +12,7 @@ import {
   CardItem
 } from "native-base";
 import NavBar from "../components/NavBar";
+import { Keyboard } from "react-native";
 
 export default class Digitos extends Component {
   state = {
@@ -22,6 +23,7 @@ export default class Digitos extends Component {
   countDigits = () => {
     let num = this.state.number;
     let dig = num.length;
+    Keyboard.dismiss();
 
     this.setState({ digits: dig });
   };

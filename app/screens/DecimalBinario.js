@@ -12,6 +12,7 @@ import {
   CardItem
 } from "native-base";
 import NavBar from "../components/NavBar";
+import { Keyboard } from "react-native";
 
 export default class DecimalBinario extends Component {
   state = {
@@ -22,6 +23,7 @@ export default class DecimalBinario extends Component {
   convertDecBin = () => {
     let num = parseInt(this.state.number);
     let binary = num.toString(2);
+    Keyboard.dismiss();
     this.setState({ bin: binary });
   };
 

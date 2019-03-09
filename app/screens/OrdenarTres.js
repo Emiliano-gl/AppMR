@@ -12,6 +12,7 @@ import {
   CardItem
 } from "native-base";
 import NavBar from "../components/NavBar";
+import { Keyboard } from "react-native";
 
 export default class OrdenarTres extends Component {
   state = {
@@ -26,6 +27,7 @@ export default class OrdenarTres extends Component {
     let num2 = parseFloat(this.state.number2);
     let num3 = parseFloat(this.state.number3);
     let numeros = [];
+    Keyboard.dismiss();
 
     if (num1 > num2 && num1 > num3) {
       numeros.push(num1);
@@ -72,6 +74,7 @@ export default class OrdenarTres extends Component {
     let num2 = parseFloat(this.state.number2);
     let num3 = parseFloat(this.state.number3);
     let numeros = [];
+    Keyboard.dismiss();
 
     if (num1 > num2 && num1 > num3) {
       numeros.push(num1);

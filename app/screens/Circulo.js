@@ -12,6 +12,7 @@ import {
   CardItem
 } from "native-base";
 import NavBar from "../components/NavBar";
+import { Keyboard } from "react-native";
 
 export default class Circulo extends Component {
   state = {
@@ -23,10 +24,11 @@ export default class Circulo extends Component {
   calculateCircle = () => {
     let radio = parseFloat(this.state.radio);
     const PI = 3.1416;
-
+    
     let area = PI * (radio * radio);
     let perimetro = 2 * PI * radio;
-
+    
+    Keyboard.dismiss();
     this.setState({ area: area, perimeter: perimetro });
   };
 

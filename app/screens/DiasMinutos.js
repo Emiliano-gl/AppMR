@@ -12,6 +12,7 @@ import {
   CardItem
 } from "native-base";
 import NavBar from "../components/NavBar";
+import { Keyboard } from "react-native";
 
 export default class DiasMinutos extends Component {
   state = {
@@ -22,6 +23,7 @@ export default class DiasMinutos extends Component {
   convertDays = () => {
     let days = this.state.days;
     let minutes = days * 1440;
+    Keyboard.dismiss();
     this.setState({ res: minutes });
   };
 

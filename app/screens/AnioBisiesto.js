@@ -12,6 +12,7 @@ import {
   CardItem
 } from "native-base";
 import NavBar from "../components/NavBar";
+import { Keyboard } from "react-native";
 
 export default class AnioBisiesto extends Component {
   state = {
@@ -21,6 +22,7 @@ export default class AnioBisiesto extends Component {
 
   calculateYear = () => {
     let year = parseInt(this.state.year);
+    Keyboard.dismiss();
 
     if (year % 4 == 0 && year % 100 > 0 && year % 400 > 0) {
       this.setState({ bisiest: true });
